@@ -1,0 +1,26 @@
+meta {
+  name: Deploy application
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/api/app/deploy
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "my-app"
+  }
+}
+
+body:multipart-form {
+  name: my-app
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
