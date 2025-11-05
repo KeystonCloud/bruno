@@ -1,0 +1,23 @@
+meta {
+  name: Update user info
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url}}/api/user/{{user_uuid}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Lisa Cuddy",
+    "email": "lcuddy@ppth.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
