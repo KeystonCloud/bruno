@@ -1,0 +1,24 @@
+meta {
+  name: Create User
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/api/user
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Gregory House",
+    "email": "ghouse@ppth.com",
+    "password": "gregory_password!"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
