@@ -7,13 +7,17 @@ meta {
 put {
   url: {{base_url}}/api/user/{{user_uuid}}
   body: json
-  auth: inherit
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
 }
 
 body:json {
   {
-    "name": "Lisa Cuddy",
-    "email": "lcuddy@ppth.com"
+    "name": "Gregory House",
+    "email": "ghouse@ppth.com"
   }
 }
 

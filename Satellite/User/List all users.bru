@@ -7,9 +7,14 @@ meta {
 get {
   url: {{base_url}}/api/user
   body: none
-  auth: inherit
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

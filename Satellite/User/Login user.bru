@@ -1,0 +1,23 @@
+meta {
+  name: Login user
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base_url}}/api/user/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "ghouse@ppth.com",
+    "password": "gregory_password!"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
