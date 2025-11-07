@@ -1,11 +1,11 @@
 meta {
-  name: Delete user
+  name: Delete my user
   type: http
-  seq: 5
+  seq: 9
 }
 
 delete {
-  url: {{base_url}}/api/user/{{user_uuid}}
+  url: {{base_url}}/api/user/me
   body: none
   auth: bearer
 }

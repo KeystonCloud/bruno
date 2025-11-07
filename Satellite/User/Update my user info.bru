@@ -1,11 +1,11 @@
 meta {
-  name: Update user info
+  name: Update my user info
   type: http
-  seq: 4
+  seq: 8
 }
 
 put {
-  url: {{base_url}}/api/user/{{user_uuid}}
+  url: {{base_url}}/api/user/me
   body: json
   auth: bearer
 }
@@ -16,8 +16,8 @@ auth:bearer {
 
 body:json {
   {
-    "name": "Lisa Cuddy",
-    "email": "lcuddy@ppth.com"
+    "name": "Gregory House",
+    "email": "ghouse@ppth.com"
   }
 }
 
