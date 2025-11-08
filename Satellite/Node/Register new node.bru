@@ -1,18 +1,18 @@
 meta {
   name: Register new node
   type: http
-  seq: 2
+  seq: 1
 }
 
 post {
-  url: {{base_url}}/api/node/register
+  url: {{base_url}}/api/node
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "owner_id": "{{team_uuid}}",
+    "owner_id": "{{team_id}}",
     "name": "my_test_node",
     "port": 9000
   }
