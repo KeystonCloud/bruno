@@ -1,0 +1,27 @@
+meta {
+  name: Update application
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/api/app/deploy
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "id": "{{app_id}}",
+    "content": "<h1>Hello world!</h1>"
+  }
+}
+
+body:multipart-form {
+  name: my-app
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
