@@ -1,0 +1,10 @@
+vars {
+  base_url: http://localhost:8000
+  user_id:
+  team_id:
+  app_id:
+  node_id:
+}
+vars:secret [
+  token
+]
