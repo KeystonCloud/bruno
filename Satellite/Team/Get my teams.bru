@@ -1,0 +1,20 @@
+meta {
+  name: Get my teams
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{base_url}}/api/team/mine
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
